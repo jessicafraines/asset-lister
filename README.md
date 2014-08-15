@@ -1,7 +1,6 @@
 ## name of project
 ### Code Badges
-build status icon
-coverage status icon
+[![Build Status](https://travis-ci.org/jessicafraines/asset-lister.svg)](https://travis-ci.org/jessicafraines/asset-lister)[![Coverage Status](https://coveralls.io/repos/jessicafraines/asset-lister/badge.png)](https://coveralls.io/r/jessicafraines/asset-lister)
 
 ### About
 write a description about your project
