@@ -1,20 +1,22 @@
 {
   "_id":{"$oid":"000000000000000000000001"},
   "name":"Bob Jones",
-  "age":25,
-  "money":12834.45,
-  "birthday":{"$date":477295200000},
-  "photo":"http://images.com/bob.jpg",
-  "isEmployed":true,
-  "atomsInBody":7600500400300200100,
-  "spouse":{"name":"Janet", "age":21},
-  "things":["blue", 3, 3.14, true, null, {"a":7}, [3,5,7]],
-  "address":{"$undefined":true},
-  "resume":null,
-  "employeeId":{"$oid":"000000000000000000000002"}
-}
-{
-  "_id":{"$oid":"000000000000000000000003"},
-  "name":"Jane Marsh"
+  "photo":"http://2.bp.blogspot.com/_rCk74vgzal8/TTcfSuDegZI/AAAAAAAAAso/sfvzYM-viAs/s1600/happy-man.jpg",
+  "cash":50000,
+  "assets":[
+            {"name":"couch","photo":"http://www.couches.us/red-couch-424.jpg","value":500,"count":2},
+            {"name":"bed", "photo":"http://www.bludot.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/d/o/dodu_modern_bed_-_king_queen_full_-_graphite_5.jpg", "value":1000, "count":1}
+           ]
 }
 
+{
+  "_id":{"$oid":"000000000000000000000002"},
+  "name":"Dakota Jane",
+  "photo":"https://image-cdn.zap2it.com/images/sabrina-carpenter-girl-meets-world.jpg",
+  "cash":100000,
+  "assets":[
+            {"name":"bike","photo":"http://trus.imageg.net/graphics/media/trus/Aplusplus/2012/12827499/huffy-glitter-girls-bike-12827499-01.jpg","value":100,"count":1},
+            {"name":"treehouse", "photo":"http://upload.wikimedia.org/wikipedia/commons/b/b7/Arba_domo_en_la_parko_de_la_Ch%C3%A2teau_de_Langeais_02.jpg", "value":20000, "count":2},
+            {"name":"helicopter", "photo":"http://upload.wikimedia.org/wikipedia/commons/7/70/RAN_squirrel_helicopter_at_melb_GP_08.jpg", "value":200000, "count":1}
+           ]
+}
