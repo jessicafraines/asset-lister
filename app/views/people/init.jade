@@ -1,7 +1,13 @@
 extends ../shared/template
 block content
-  h2 Home Page!
+  h2 New Person!
+  form(method='post', action='/people')
+    input(name='name', type='text', placeholder='Bob Jones', autofocus=true)
+    input(name='photo', type='text', placeholder='http://bob.img.png')
+    input(name='cash', type='number', placeholder='$1000')
+    button Add Person
+
 
 block scripts
-  script(src='/js/user/home.js')
+  script(src='/js/user/people.js')
 

@@ -37,7 +37,7 @@ describe('Person', function(){
 
   describe('.all', function(){
     it('should get all people', function(done){
-      Person.all(function(err, people){
+      Person.all(function(people){
         expect(people).to.have.length(2);
         done();
       });

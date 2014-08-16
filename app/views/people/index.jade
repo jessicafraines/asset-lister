@@ -1,6 +1,22 @@
 extends ../shared/template
 block content
-  h2 Home Page!
+  h2 Here are the People!
+  table
+    thead
+      th Name
+      th Photo
+      th Cash
+      th Assets
+      th Total
+    tbody
+    each person in people
+      tr
+        td: a(href='/people/#{person._id}')= person.name
+        td: img(src='#{person.photo}')
+        td $#{person.cash}
+
+
+
 
 block scripts
   script(src='/js/user/home.js')
