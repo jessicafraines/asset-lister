@@ -34,9 +34,9 @@ Person.findById = function(id, cb){
   });
 };
 
-Person.prototype.addAsset = function(object){
-  var asset = {name:object.name, photo:object.photo, value:parseFloat(object.value)};
+Person.prototype.addAsset = function(asset, cb){
   this.assets.push(asset);
+  Person.collection.update({_id:this._id}, {$push: {assets:asset}}, cb);
 };
 
 

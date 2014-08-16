@@ -17,7 +17,11 @@ block content
     tbody
       each asset in person.assets
         tr
-          td= person.asset.name
+          td= asset.name
+          td: img(src='#{asset.photo}')
+          td $#{asset.value}
+          td= asset.count
+          td $#{asset.count * asset.value}
 
 block scripts
   script(src='/js/user/home.js')

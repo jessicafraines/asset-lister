@@ -16,13 +16,11 @@ describe('Person', function(){
       done();
     });
   });
-
   beforeEach(function(done){
     cp.execFile(__dirname + '/../scripts/clean-db.sh', [db], {cwd:__dirname + '/../scripts'}, function(err, stdout, stderr){
       done();
     });
   });
-
   describe('constructor', function(){
     it('should create a new Person object', function(){
       var o = {name:'bob jones', photo:'http://bob.img', cash:'100'},
@@ -34,7 +32,6 @@ describe('Person', function(){
       expect(p.assets).to.have.length(0);
     });
   });
-
   describe('.all', function(){
     it('should get all people', function(done){
       Person.all(function(people){
@@ -50,6 +47,16 @@ describe('Person', function(){
       p.save(function(){
         expect(p._id).to.be.instanceof(Mongo.ObjectID);
         done();
+      });
+    });
+  });
+  describe('#addAsset', function(){
+    it('should add an asset to a given person', function(done){
+      Person.findById('000000000000000000000001', function(person){
+        person.addAsset({name: 'Boat', photo: 'http://cdn.ubergizmo.com/photos/2009/1/guitar-boat.jpg', value:'50000', count:'1'}, function(){
+          expect(person.assets.length).to.equal(3);
+          done();
+        });
       });
     });
   });

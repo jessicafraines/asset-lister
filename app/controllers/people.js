@@ -31,10 +31,9 @@ exports.assets = function(req, res){
 };
 
 exports.addAssets = function(req, res){
-  Person.findById(req.params.id, function(err, person){
-    person.addAsset(req.body);
-    person.save(function(){
-      res.redirect('/people/:id');
+  Person.findById(req.params.id, function(person){
+    person.addAsset(req.body, function(){
+      res.redirect('/people/' + req.params.id);
     });
   });
 };
