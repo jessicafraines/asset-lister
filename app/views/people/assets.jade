@@ -1,6 +1,12 @@
 extends ../shared/template
 block content
-  h2 Home Page!
+  h2 Add an Asset!
+  form(method='post', action='/people/#{person._id}')
+    input(name='name', type='text', placeholder='couch', autofocus=true)
+    input(name='photo', type='text', placeholder='http://img.png')
+    input(name='value', type='number', placeholder='$1000')
+    input(name='count', type='number', placeholder='2')
+    button Add Item
 
 block scripts
   script(src='/js/user/home.js')

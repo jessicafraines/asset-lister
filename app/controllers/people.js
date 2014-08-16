@@ -23,3 +23,18 @@ exports.show = function(req, res){
     res.render('people/show', {person:dogFarts});
   });
 };
+
+exports.assets = function(req, res){
+  Person.findById(req.params.id, function(dogFarts){
+    res.render('people/assets', {person:dogFarts});
+  });
+};
+
+exports.addAssets = function(req, res){
+  Person.findById(req.params.id, function(err, person){
+    person.addAsset(req.body);
+    person.save(function(){
+      res.redirect('/people/:id');
+    });
+  });
+};

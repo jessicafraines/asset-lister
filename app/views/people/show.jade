@@ -1,6 +1,12 @@
 extends ../shared/template
 block content
-  h2 Show Page!
+
+  a(href='/people/#{person._id}/assets/new')
+    button Add Asset
+  h2= person.name
+  .image
+    img(src='#{person.photo}')
+  .cash $#{person.cash}
   table
     thead
       th name
@@ -9,6 +15,9 @@ block content
       th count
       th total
     tbody
+      each asset in person.assets
+        tr
+          td= person.asset.name
 
 block scripts
   script(src='/js/user/home.js')
