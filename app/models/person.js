@@ -10,7 +10,8 @@ function Person(object){
 }
 
 Object.defineProperty(Person, 'collection', {
-  get: function(){return global.mongodb.collection('people');}
+  get: function(){return global.mongodb.collection('people');
+  }
 });
 
 Person.all = function(cb){
@@ -18,6 +19,7 @@ Person.all = function(cb){
     var people = objects.map(function(object){
       return changePrototype(object);
     });
+    console.log('PERSON', people);
     cb(people);
   });
 };
@@ -37,7 +39,10 @@ Person.findById = function(id, cb){
 Person.prototype.addAsset = function(asset, cb){
   this.assets.push(asset);
   Person.collection.update({_id:this._id}, {$push: {assets:asset}}, cb);
+
+//  var assetValue =  _.map(assets, 'value');
 };
+
 
 
 module.exports = Person;

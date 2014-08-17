@@ -14,12 +14,9 @@ block content
         td: a(href='/people/#{person._id}')= person.name
         td: img(src='#{person.photo}')
         td $#{person.cash}
-
-          each asset in person.assets
-
-            td $#{asset.value}
-            td= asset.count
-
+        td
+        //each asset in person.assets
+          td #{total += asset.value}
 
 
 block scripts

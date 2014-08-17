@@ -1,13 +1,14 @@
 extends ../shared/template
 block content
 
-  a(href='/people/#{person._id}/assets/new')
-    button Add Asset
+  #name
   h2= person.name
   .image
     img(src='#{person.photo}')
   .cash $#{person.cash}
-  .assets $#{asset.value += asset.count}
+  .left
+    a(href='/people/#{person._id}/assets/new')
+      button Add Asset
   table
     thead
       th name
