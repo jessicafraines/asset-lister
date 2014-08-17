@@ -7,20 +7,15 @@ An app that tracks assets and their values
 
 ### Models
 ```
-Model 1
-prop-a
-prop-b
-.classMethod-c
-#instanceMethod-d
+Person
+People Database
+
+.classMethod-all
+.classMethod-findById
+#instanceMethod-addAsset
+#instanceMethod-save
 ```
 
-```
-Model 2
-prop-e
-prop-f
-.classMethod-g
-#instanceMethod-h
-```
 
 ### Features
 - feature 1
