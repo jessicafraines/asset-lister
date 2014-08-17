@@ -40,6 +40,14 @@ describe('Person', function(){
       });
     });
   });
+
+  describe('.findById', function(){
+    it('should find a person by ID', function(){
+      Person.findById('000000000000000000000001', function(person){
+        expect(person._id).to.be.instanceof(Mongo.ObjectID);
+      });
+    });
+  });
   describe('#save', function(){
     it('should save a person to the database', function(done){
       var o = {name:'bob jones', photo:'http://bob.img', cash:'100'},

@@ -10,7 +10,7 @@ function Person(object){
 }
 
 Object.defineProperty(Person, 'collection', {
-  get: function(){return global.mongodb.collection('asset');}
+  get: function(){return global.mongodb.collection('people');}
 });
 
 Person.all = function(cb){
